@@ -1,228 +1,228 @@
 CREATE OR REPLACE TABLE activity_log (
   id BIGINT,
-  log_name VARCHAR(255),
+  log_name VARCHAR,
   description VARCHAR,
-  subject_type VARCHAR(255),
-  event VARCHAR(255),
+  subject_type VARCHAR,
+  event VARCHAR,
   subject_id BIGINT,
-  causer_type VARCHAR(255),
+  causer_type VARCHAR,
   causer_id BIGINT,
   properties VARCHAR,
-  batch_uuid CHAR(36),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  batch_uuid VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE admins (
   id BIGINT,
-  title VARCHAR(255),
-  first_name VARCHAR(255),
-  middle_name VARCHAR(255),
-  last_name VARCHAR(255),
-  email VARCHAR(255),
-  phone VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  title VARCHAR,
+  first_name VARCHAR,
+  middle_name VARCHAR,
+  last_name VARCHAR,
+  email VARCHAR,
+  phone VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE asset_addresses (
   id BIGINT,
-  postcode VARCHAR(255),
-  country VARCHAR(255),
-  county VARCHAR(255),
-  city VARCHAR(255),
-  district VARCHAR(255),
-  street VARCHAR(255),
-  house_number VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  postcode VARCHAR,
+  country VARCHAR,
+  county VARCHAR,
+  city VARCHAR,
+  district VARCHAR,
+  street VARCHAR,
+  house_number VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE asset_insurance_type (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE asset_types (
   id BIGINT,
-  name VARCHAR(255),
+  name VARCHAR,
   max_ltv NUMBER(22,4),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE attribute_entities (
   id BIGINT,
-  name VARCHAR(255),
+  name VARCHAR,
   class VARCHAR(64),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE attribute_types (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  name VARCHAR,
+  created_at date,
+  updated_at date,
   is_system_type INTEGER,
-  deleted_at TIMESTAMP_NTZ
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE bank_details (
   id BIGINT,
-  sort_code VARCHAR(255),
-  account_number VARCHAR(255),
-  bic VARCHAR(255),
-  iban VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  sort_code VARCHAR,
+  account_number VARCHAR,
+  bic VARCHAR,
+  iban VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE bridge_drawdown_types (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE charge_types (
   id BIGINT,
-  name VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE client_form_status (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE companies (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE currencies (
   id BIGINT,
-  label VARCHAR(255),
-  currency_code VARCHAR(255),
-  prefix VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  label VARCHAR,
+  currency_code VARCHAR,
+  prefix VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE deal_aborted_reasons (
   id BIGINT,
   title VARCHAR,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE deal_document_risk (
   id BIGINT,
-  name VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE deal_statuses (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE deal_types (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE document_types (
   id BIGINT,
-  name VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE drawdown_event_amount_type (
   id BIGINT,
-  name VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE drawdown_event_status (
   id BIGINT,
-  name VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE drawdown_status (
   id BIGINT,
-  name VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE failed_jobs (
   id BIGINT,
-  uuid VARCHAR(255),
+  uuid VARCHAR,
   connection VARCHAR,
   queue VARCHAR,
   payload VARCHAR,
   exception VARCHAR,
-  failed_at TIMESTAMP_NTZ
+  failed_at date
 );
 
 CREATE OR REPLACE TABLE fee_options (
   id BIGINT,
-  name VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE fee_status (
   id BIGINT,
-  name VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE fee_type (
   id BIGINT,
-  name VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  name VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date,
   default_value_flat NUMBER(22,4),
   default_value_perc NUMBER(8,2),
   not_deletable INTEGER,
@@ -231,87 +231,87 @@ CREATE OR REPLACE TABLE fee_type (
 
 CREATE OR REPLACE TABLE form_types (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE guarantor_corporates (
   id BIGINT,
-  company_name VARCHAR(255),
-  company_number VARCHAR(255),
-  email VARCHAR(255),
-  phone VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  company_name VARCHAR,
+  company_number VARCHAR,
+  email VARCHAR,
+  phone VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE guarantor_individuals (
   id BIGINT,
-  title VARCHAR(255),
-  first_name VARCHAR(255),
-  middle_name VARCHAR(255),
-  last_name VARCHAR(255),
-  email VARCHAR(255),
-  phone VARCHAR(255),
-  previous_name VARCHAR(255),
-  marital_status VARCHAR(255),
+  title VARCHAR,
+  first_name VARCHAR,
+  middle_name VARCHAR,
+  last_name VARCHAR,
+  email VARCHAR,
+  phone VARCHAR,
+  previous_name VARCHAR,
+  marital_status VARCHAR,
   date_of_birth DATE,
-  nationality VARCHAR(255),
-  passport_number VARCHAR(255),
+  nationality VARCHAR,
+  passport_number VARCHAR,
   permanent_right_to_reside VARCHAR,
   address_history VARIANT,
-  ppsn VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  ppsn VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE guarantor_type (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE interest_calculation_types (
   id BIGINT,
-  name VARCHAR(255),
-  formula VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  formula VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE interest_subtypes (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE interest_types (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE introducer_type (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE jobs (
   id BIGINT,
-  queue VARCHAR(255),
+  queue VARCHAR,
   payload VARCHAR,
   attempts INTEGER,
   reserved_at INTEGER,
@@ -321,79 +321,79 @@ CREATE OR REPLACE TABLE jobs (
 
 CREATE OR REPLACE TABLE lending_types (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE loan_calculation_method (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE marital_statuses (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE marketing_sources (
   id BIGINT,
-  name VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE migrations (
   id INTEGER,
-  migration VARCHAR(255),
+  migration VARCHAR,
   batch INTEGER
 );
 
 CREATE OR REPLACE TABLE name_titles (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE order_statuses (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE ownership_types (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE password_resets (
   my_row_id BIGINT,
-  email VARCHAR(255),
-  token VARCHAR(255),
-  created_at TIMESTAMP_NTZ
+  email VARCHAR,
+  token VARCHAR,
+  created_at date
 );
 
 CREATE OR REPLACE TABLE payment_providers (
   id BIGINT,
-  name VARCHAR(255),
+  name VARCHAR,
   is_default INTEGER,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE payments (
@@ -401,219 +401,219 @@ CREATE OR REPLACE TABLE payments (
   base_cost NUMBER(20,0),
   vat_rate NUMBER(22,4),
   gross_total NUMBER(22,4),
-  charge_outcome VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  charge_outcome VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE permission_category (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE permission_groups (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE personal_access_tokens (
   id BIGINT,
-  tokenable_type VARCHAR(255),
+  tokenable_type VARCHAR,
   tokenable_id BIGINT,
-  name VARCHAR(255),
+  name VARCHAR,
   token VARCHAR(64),
   abilities VARCHAR,
-  last_used_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  last_used_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE profile_approval_status (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE provider_types (
   id BIGINT,
-  name VARCHAR(255),
+  name VARCHAR,
   details VARCHAR,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE purpose_credit_types (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE quotes_status (
   id BIGINT,
-  name VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE roles (
   id BIGINT,
-  name VARCHAR(255),
-  guard_name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  guard_name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE sharepoint_updates_timestamps (
   id BIGINT,
-  last_update TIMESTAMP_NTZ,
-  change_token VARCHAR(255)
+  last_update date,
+  change_token VARCHAR
 );
 
 CREATE OR REPLACE TABLE stripe_settings (
   id BIGINT,
-  name VARCHAR(255),
-  stripe_key VARCHAR(255),
-  stripe_secret VARCHAR(255),
-  stripe_webhook_secret VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  stripe_key VARCHAR,
+  stripe_secret VARCHAR,
+  stripe_webhook_secret VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE systems_deal_setting_groups (
   id BIGINT,
   name VARCHAR,
   order_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE use_type (
   id BIGINT,
-  name VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE user_types (
   id BIGINT,
   role_id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  name VARCHAR,
+  created_at date,
+  updated_at date,
   is_admin INTEGER,
-  deleted_at TIMESTAMP_NTZ
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE valuation_statuses (
   id BIGINT,
-  name VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  name VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE variable_rate_settings (
   id BIGINT,
-  name VARCHAR(255),
+  name VARCHAR,
   value NUMBER(22,4),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE variable_rate_sources (
   id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE addresses (
   id BIGINT,
   ownership_type_id BIGINT,
-  postcode VARCHAR(255),
-  country VARCHAR(255),
-  county VARCHAR(255),
-  city VARCHAR(255),
-  district VARCHAR(255),
-  street VARCHAR(255),
-  house_number VARCHAR(255),
+  postcode VARCHAR,
+  country VARCHAR,
+  county VARCHAR,
+  city VARCHAR,
+  district VARCHAR,
+  street VARCHAR,
+  house_number VARCHAR,
   lived_for_months INTEGER,
   lived_for_years INTEGER,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE attribute_groups (
   id BIGINT,
   attribute_entity_id BIGINT,
-  name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  name VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE attributes (
   id BIGINT,
-  parent_id VARCHAR(255),
-  attribute_batch VARCHAR(255),
+  parent_id VARCHAR,
+  attribute_batch VARCHAR,
   attribute_group_id BIGINT,
   attribute_type_id BIGINT,
-  reference VARCHAR(255),
+  reference VARCHAR,
   is_system_attribute INTEGER,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  field_name VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  field_name VARCHAR,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE brokers (
   id BIGINT,
-  name VARCHAR(255),
-  email VARCHAR(255),
-  phone VARCHAR(255),
+  name VARCHAR,
+  email VARCHAR,
+  phone VARCHAR,
   commission_rate NUMBER(22,4),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ,
+  created_at date,
+  updated_at date,
+  deleted_at date,
   engagement_letter DATE,
   address_id BIGINT,
-  landline VARCHAR(255),
-  mobile VARCHAR(255),
+  landline VARCHAR,
+  mobile VARCHAR,
   location VARCHAR,
-  secondary_phone VARCHAR(255),
+  secondary_phone VARCHAR,
   bank_details_id BIGINT,
-  point_of_contact_name VARCHAR(255)
+  point_of_contact_name VARCHAR
 );
 
 CREATE OR REPLACE TABLE client_companies (
   id BIGINT,
   company_id BIGINT,
-  name VARCHAR(255),
-  email VARCHAR(255),
-  phone VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ,
+  name VARCHAR,
+  email VARCHAR,
+  phone VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date,
   address_id BIGINT,
-  landline VARCHAR(255),
-  mobile VARCHAR(255),
+  landline VARCHAR,
+  mobile VARCHAR,
   bank_details VARCHAR,
   bank_details_id BIGINT
 );
@@ -621,14 +621,14 @@ CREATE OR REPLACE TABLE client_companies (
 CREATE OR REPLACE TABLE client_groups (
   id BIGINT,
   company_id BIGINT,
-  name VARCHAR(255),
-  email VARCHAR(255),
-  phone VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ,
-  landline VARCHAR(255),
-  mobile VARCHAR(255),
+  name VARCHAR,
+  email VARCHAR,
+  phone VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date,
+  landline VARCHAR,
+  mobile VARCHAR,
   bank_details VARCHAR,
   address_id BIGINT,
   bank_details_id BIGINT
@@ -636,20 +636,20 @@ CREATE OR REPLACE TABLE client_groups (
 
 CREATE OR REPLACE TABLE documents (
   id BIGINT,
-  filename VARCHAR(255),
+  filename VARCHAR,
   document_type_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE drawdown_event_type (
   id BIGINT,
   drawdown_event_amount_type_id BIGINT,
-  name VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  name VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date,
   enabled_to_schedule_before INTEGER
 );
 
@@ -657,35 +657,35 @@ CREATE OR REPLACE TABLE fee_type_lending_type (
   id BIGINT,
   fee_type_id BIGINT,
   lending_type_id BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE introducers (
   id BIGINT,
-  company VARCHAR(255),
-  contact VARCHAR(255),
-  email VARCHAR(255),
-  phone VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ,
+  company VARCHAR,
+  contact VARCHAR,
+  email VARCHAR,
+  phone VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date,
   introducer_type_id BIGINT
 );
 
 CREATE OR REPLACE TABLE lenders (
   id BIGINT,
-  name VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  name VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date,
   historical INTEGER,
   stripe_settings_id BIGINT
 );
 
 CREATE OR REPLACE TABLE model_has_roles (
   role_id BIGINT,
-  model_type VARCHAR(255),
+  model_type VARCHAR,
   model_id BIGINT
 );
 
@@ -694,21 +694,21 @@ CREATE OR REPLACE TABLE payment_attempts (
   payment_id BIGINT,
   amount NUMBER(22,4),
   status INTEGER,
-  error_message VARCHAR(255),
+  error_message VARCHAR,
   payment_method_id BIGINT,
-  payment_intent_id VARCHAR(255),
-  payment_reference VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  payment_intent_id VARCHAR,
+  payment_reference VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE permissions (
   id BIGINT,
-  name VARCHAR(255),
-  guard_name VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  name VARCHAR,
+  guard_name VARCHAR,
+  created_at date,
+  updated_at date,
   permission_category_id BIGINT,
   parent_id BIGINT
 );
@@ -721,14 +721,14 @@ CREATE OR REPLACE TABLE role_has_permissions (
 CREATE OR REPLACE TABLE service_providers (
   id BIGINT,
   provider_type_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  forename VARCHAR(255),
-  surname VARCHAR(255),
-  company VARCHAR(255),
-  email VARCHAR(255),
-  phone VARCHAR(255),
+  deleted_at date,
+  created_at date,
+  updated_at date,
+  forename VARCHAR,
+  surname VARCHAR,
+  company VARCHAR,
+  email VARCHAR,
+  phone VARCHAR,
   engagement_letter DATE
 );
 
@@ -738,19 +738,19 @@ CREATE OR REPLACE TABLE systems_deal_setting (
   order_id BIGINT,
   systems_deal_setting_group_id BIGINT,
   status INTEGER,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE task_group (
   id BIGINT,
   lending_type_id BIGINT,
-  name VARCHAR(255),
+  name VARCHAR,
   order_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE variable_rates (
@@ -758,9 +758,9 @@ CREATE OR REPLACE TABLE variable_rates (
   variable_rate_source_id BIGINT,
   parent_id BIGINT,
   rate NUMBER(22,4),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE variable_rates_history (
@@ -768,9 +768,9 @@ CREATE OR REPLACE TABLE variable_rates_history (
   date DATE,
   variable_rate_source_id BIGINT,
   rate NUMBER(22,4),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE variable_rates_history_copy1 (
@@ -778,22 +778,22 @@ CREATE OR REPLACE TABLE variable_rates_history_copy1 (
   date DATE,
   variable_rate_source_id BIGINT,
   rate NUMBER(12,2),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE lender_funder_interest_rate (
   id BIGINT,
   lender_id BIGINT,
   interest_rate NUMBER(8,2),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE model_has_permissions (
   permission_id BIGINT,
-  model_type VARCHAR(255),
+  model_type VARCHAR,
   model_id BIGINT
 );
 
@@ -801,59 +801,59 @@ CREATE OR REPLACE TABLE permission_group_permission (
   id BIGINT,
   permission_group_id BIGINT,
   permission_id BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE task (
   id BIGINT,
-  name VARCHAR(255),
+  name VARCHAR,
   order_id BIGINT,
   task_group_id BIGINT,
   auto_assign_to_case_owner INTEGER,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE asset_client_companies (
   id BIGINT,
   asset_id BIGINT,
   client_company_id BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE asset_client_individuals (
   id BIGINT,
   asset_id BIGINT,
   client_individual_id BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE asset_insurance_notes (
   id BIGINT,
   asset_insurance_id BIGINT,
   note_id BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE asset_insurances (
   id BIGINT,
   asset_id BIGINT,
-  policy_number VARCHAR(255),
+  policy_number VARCHAR,
   is_novellus_nominated_payee INTEGER,
   type_loss_payee VARCHAR,
   expiry_date DATE,
   sum_insured NUMBER(22,4),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ,
+  created_at date,
+  updated_at date,
+  deleted_at date,
   asset_insurance_type_id BIGINT
 );
 
@@ -861,49 +861,49 @@ CREATE OR REPLACE TABLE assets (
   id BIGINT,
   asset_type_id BIGINT,
   client_group_id BIGINT,
-  name VARCHAR(255),
+  name VARCHAR,
   security INTEGER,
   jointly_owned INTEGER,
   independent_valuation NUMBER(22,4),
   internal_valuation NUMBER(22,4),
   asset_description VARCHAR,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  deleted_at date,
+  created_at date,
+  updated_at date,
   asset_address_id BIGINT,
   deal_id BIGINT,
   use_type_id BIGINT,
-  insurance_expiry_date TIMESTAMP_NTZ
+  insurance_expiry_date date
 );
 
 CREATE OR REPLACE TABLE attribute_values (
   id BIGINT,
   client_form_id BIGINT,
   attribute_id BIGINT,
-  value VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  value VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE audit (
   id BIGINT,
   user_id BIGINT,
-  model VARCHAR(255),
+  model VARCHAR,
   model_id BIGINT,
   deal_id BIGINT,
-  event_group_id VARCHAR(255),
-  event_type VARCHAR(255),
+  event_group_id VARCHAR,
+  event_type VARCHAR,
   record_created INTEGER,
-  field VARCHAR(255),
-  field_name VARCHAR(255),
-  from_data VARCHAR(255),
-  from_data_text VARCHAR(255),
-  to_data VARCHAR(255),
-  to_data_text VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  field VARCHAR,
+  field_name VARCHAR,
+  from_data VARCHAR,
+  from_data_text VARCHAR,
+  to_data VARCHAR,
+  to_data_text VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE borrowers (
@@ -918,9 +918,9 @@ CREATE OR REPLACE TABLE borrowers (
   main_contact INTEGER,
   administrator INTEGER,
   guarantor INTEGER,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE broker_agent_deals (
@@ -928,18 +928,18 @@ CREATE OR REPLACE TABLE broker_agent_deals (
   broker_agent_id BIGINT,
   broker_agent_main_contact INTEGER,
   deal_id BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE broker_agent_notes (
   id BIGINT,
   broker_agent_id BIGINT,
   note_id BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ,
+  created_at date,
+  updated_at date,
+  deleted_at date,
   negative_relationship INTEGER
 );
 
@@ -947,35 +947,35 @@ CREATE OR REPLACE TABLE broker_agents (
   id BIGINT,
   broker_id BIGINT,
   user_id BIGINT,
-  name VARCHAR(255),
-  email VARCHAR(255),
-  phone VARCHAR(255),
+  name VARCHAR,
+  email VARCHAR,
+  phone VARCHAR,
   bank_details_id BIGINT,
   questionable INTEGER,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ,
+  created_at date,
+  updated_at date,
+  deleted_at date,
   address_id BIGINT,
-  landline VARCHAR(255),
-  mobile VARCHAR(255)
+  landline VARCHAR,
+  mobile VARCHAR
 );
 
 CREATE OR REPLACE TABLE broker_notes (
   id BIGINT,
   broker_id BIGINT,
   note_id BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE ccr_reports (
   id BIGINT,
-  title VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  title VARCHAR,
+  created_at date,
+  updated_at date,
   file_id BIGINT,
-  deleted_at TIMESTAMP_NTZ
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE charges (
@@ -988,9 +988,9 @@ CREATE OR REPLACE TABLE charges (
   asset_id BIGINT,
   lender_id BIGINT,
   charge_type_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE client_company_clients (
@@ -998,35 +998,35 @@ CREATE OR REPLACE TABLE client_company_clients (
   client_company_id BIGINT,
   client_individual_id BIGINT,
   shareholding_percentage NUMBER(22,4),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE client_company_notes (
   id BIGINT,
   client_company_id BIGINT,
   note_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE client_form_attachments (
   id BIGINT,
   client_form_id BIGINT,
   file_id BIGINT,
-  form_attribute_reference VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  form_attribute_reference VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE client_forms (
   id BIGINT,
-  client_form_hash VARCHAR(255),
+  client_form_hash VARCHAR,
   form_id BIGINT,
-  client_form_batch_id VARCHAR(255),
+  client_form_batch_id VARCHAR,
   paid INTEGER,
   deal_id BIGINT,
   broker_agent_id BIGINT,
@@ -1036,16 +1036,16 @@ CREATE OR REPLACE TABLE client_forms (
   client_group_id BIGINT,
   form_data_json VARCHAR,
   sent_by_user_id BIGINT,
-  form_sent_at TIMESTAMP_NTZ,
-  form_populated_at TIMESTAMP_NTZ,
-  form_completed_at TIMESTAMP_NTZ,
+  form_sent_at date,
+  form_populated_at date,
+  form_completed_at date,
   docusign_document_sent NUMBER(20,0),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  created_at date,
+  updated_at date,
   client_form_status_id BIGINT,
-  docusign_envelope_id VARCHAR(255),
+  docusign_envelope_id VARCHAR,
   docusign_completed_datetime DATE,
-  deleted_at TIMESTAMP_NTZ
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE client_group_clients (
@@ -1054,19 +1054,19 @@ CREATE OR REPLACE TABLE client_group_clients (
   client_company_id BIGINT,
   client_individual_id BIGINT,
   group_leader INTEGER,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE client_individual_credit_data (
   id BIGINT,
   client_individual_id BIGINT,
   input_dob DATE,
-  input_name VARCHAR(255),
-  input_surname VARCHAR(255),
-  input_county VARCHAR(255),
-  risk_factor VARCHAR(255),
+  input_name VARCHAR,
+  input_surname VARCHAR,
+  input_county VARCHAR,
+  risk_factor VARCHAR,
   num_defaulter INTEGER,
   num_drn INTEGER,
   num_shareholding INTEGER,
@@ -1079,18 +1079,18 @@ CREATE OR REPLACE TABLE client_individual_credit_data (
   num_dsa INTEGER,
   num_judgment INTEGER,
   num_business_name INTEGER,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE client_individual_notes (
   id BIGINT,
   client_individual_id BIGINT,
   note_id BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE client_individuals (
@@ -1102,21 +1102,21 @@ CREATE OR REPLACE TABLE client_individuals (
   name_title_id BIGINT,
   marital_status_id BIGINT,
   total_gross_income NUMBER(22,4),
-  employment_status VARCHAR(255),
-  residency_status VARCHAR(255),
-  job_title VARCHAR(255),
-  nature_of_business VARCHAR(255),
-  employer_name VARCHAR(255),
-  passport_number VARCHAR(255),
+  employment_status VARCHAR,
+  residency_status VARCHAR,
+  job_title VARCHAR,
+  nature_of_business VARCHAR,
+  employer_name VARCHAR,
+  passport_number VARCHAR,
   is_administrator_only INTEGER,
-  dob_day VARCHAR(255),
-  dob_month VARCHAR(255),
-  dob_year VARCHAR(255),
-  previous_names VARCHAR(255),
-  nationality VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  dob_day VARCHAR,
+  dob_month VARCHAR,
+  dob_year VARCHAR,
+  previous_names VARCHAR,
+  nationality VARCHAR,
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE deal_activities (
@@ -1126,9 +1126,9 @@ CREATE OR REPLACE TABLE deal_activities (
   user_id BIGINT,
   audit_id BIGINT,
   file_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  deleted_at date,
+  created_at date,
+  updated_at date,
   date DATE,
   time_taken TIME
 );
@@ -1138,14 +1138,14 @@ CREATE OR REPLACE TABLE deal_document_categories (
   sharepoint_unique_id VARCHAR(1024),
   folder_path VARCHAR(1024),
   parent_id BIGINT,
-  name VARCHAR(255),
+  name VARCHAR,
   file_count INTEGER,
   deal_id BIGINT,
   size INTEGER,
-  last_updated TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  last_updated date,
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE deal_document_categories_data (
@@ -1154,10 +1154,10 @@ CREATE OR REPLACE TABLE deal_document_categories_data (
   deal_document_category_id BIGINT,
   file_count INTEGER,
   size INTEGER,
-  last_updated TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  last_updated date,
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE deal_documents (
@@ -1171,18 +1171,18 @@ CREATE OR REPLACE TABLE deal_documents (
   client_individual_id BIGINT,
   asset_id BIGINT,
   description VARCHAR,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE deal_introducers (
   id BIGINT,
   introducer_id BIGINT,
   deal_id BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ,
+  created_at date,
+  updated_at date,
+  deleted_at date,
   broker_id BIGINT,
   introducer_type_id BIGINT
 );
@@ -1190,9 +1190,9 @@ CREATE OR REPLACE TABLE deal_introducers (
 CREATE OR REPLACE TABLE deal_notes (
   id BIGINT,
   deal_id BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ,
+  created_at date,
+  updated_at date,
+  deleted_at date,
   replied_to_id BIGINT,
   created_by_user_id BIGINT,
   important INTEGER,
@@ -1206,12 +1206,12 @@ CREATE OR REPLACE TABLE deal_notification_rules (
   file_id BIGINT,
   notification_rule_id BIGINT,
   scheduled_for INTEGER,
-  interval_type VARCHAR(255),
-  subject VARCHAR(255),
+  interval_type VARCHAR,
+  subject VARCHAR,
   body VARCHAR,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  deleted_at date,
+  created_at date,
+  updated_at date,
   scheduled_date DATE,
   notification_template_id BIGINT
 );
@@ -1220,9 +1220,9 @@ CREATE OR REPLACE TABLE deal_notification_rules_recipients (
   id BIGINT,
   deal_notification_rule_id BIGINT,
   client_individual_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE deal_rate_floors (
@@ -1230,7 +1230,7 @@ CREATE OR REPLACE TABLE deal_rate_floors (
   variable_source_id BIGINT,
   deal_id BIGINT,
   floor_rate NUMBER(22,4),
-  deleted_at TIMESTAMP_NTZ
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE deal_setting_groups (
@@ -1238,9 +1238,9 @@ CREATE OR REPLACE TABLE deal_setting_groups (
   name VARCHAR,
   order_id BIGINT,
   deal_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE deal_settings (
@@ -1249,44 +1249,44 @@ CREATE OR REPLACE TABLE deal_settings (
   status INTEGER,
   order_id BIGINT,
   deal_setting_group_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE deal_task (
   id BIGINT,
-  name VARCHAR(255),
+  name VARCHAR,
   complete INTEGER,
   order_id BIGINT,
   deal_task_group_id BIGINT,
   actioned_by_user_id BIGINT,
   assigned_to_user_id BIGINT,
   date_due DATE,
-  date TIMESTAMP_NTZ,
+  date date,
   auto_assign_to_case_owner INTEGER,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  deleted_at date,
+  created_at date,
+  updated_at date,
   na INTEGER
 );
 
 CREATE OR REPLACE TABLE deal_task_group (
   id BIGINT,
-  name VARCHAR(255),
+  name VARCHAR,
   order_id BIGINT,
   deal_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE deals (
   id BIGINT,
-  name VARCHAR(255),
+  name VARCHAR,
   parent_id BIGINT,
   case_owner_id BIGINT,
-  reference VARCHAR(255),
+  reference VARCHAR,
   type_id BIGINT,
   guarantor_id BIGINT,
   client_group_id BIGINT,
@@ -1298,9 +1298,9 @@ CREATE OR REPLACE TABLE deals (
   date_of_approval DATE,
   purpose_credit_type_id BIGINT,
   base_rate_floor NUMBER(22,4),
-  loan_term VARCHAR(255),
+  loan_term VARCHAR,
   purchase_price NUMBER(22,4),
-  amount_required VARCHAR(255),
+  amount_required VARCHAR,
   max_ltv INTEGER,
   marketing_source_id BIGINT,
   usage_details VARCHAR,
@@ -1308,11 +1308,11 @@ CREATE OR REPLACE TABLE deals (
   funds_going_to_be_used_for VARCHAR,
   shortfall_balance_details VARCHAR,
   exit_strategy VARCHAR,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ,
-  marketing_source_utm VARCHAR(255),
-  marketing_campaign_utm VARCHAR(255),
+  created_at date,
+  updated_at date,
+  deleted_at date,
+  marketing_source_utm VARCHAR,
+  marketing_campaign_utm VARCHAR,
   aborted_reason_id BIGINT,
   previous_status_id BIGINT,
   estimated_sale_time DATE,
@@ -1332,9 +1332,9 @@ CREATE OR REPLACE TABLE delegated_owners (
   id BIGINT,
   deal_id BIGINT,
   user_id BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE drawdown_events (
@@ -1348,9 +1348,9 @@ CREATE OR REPLACE TABLE drawdown_events (
   variable_rate_source_id BIGINT,
   accrued_amount NUMBER(22,4),
   note VARCHAR,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  deleted_at date,
+  created_at date,
+  updated_at date,
   end_date DATE,
   amount_of_loan_in_default NUMBER(22,4),
   default_interest_rate NUMBER(22,4),
@@ -1384,33 +1384,33 @@ CREATE OR REPLACE TABLE drawdown_fees (
   quoted_date DATE,
   quote_confirmed_date DATE,
   undertaking_confirmed_date DATE,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE drawdown_fields_approval (
   id BIGINT,
-  field_name VARCHAR(255),
+  field_name VARCHAR,
   is_approved INTEGER,
   approved_by BIGINT,
   drawdown_id BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE drawdowns (
   id BIGINT,
-  name VARCHAR(255),
+  name VARCHAR,
   deal_id BIGINT,
   drawdown_status_id BIGINT,
   lender_id BIGINT,
   interest_rate NUMBER(22,4),
   redemption_date DATE,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  deleted_at date,
+  created_at date,
+  updated_at date,
   interest_calculation_type_id BIGINT,
   total_net_loan NUMBER(22,4),
   gross_loan NUMBER(22,4),
@@ -1480,20 +1480,20 @@ CREATE OR REPLACE TABLE drawdowns (
   used_floor_rate_note VARCHAR,
   profile_approval_status_id BIGINT,
   first_approval_user_id BIGINT,
-  first_approval_datetime TIMESTAMP_NTZ,
+  first_approval_datetime date,
   second_approval_user_id BIGINT,
   submitted_by_user_id BIGINT,
-  approval_datetime TIMESTAMP_NTZ,
+  approval_datetime date,
   rejected_note VARCHAR
 );
 
 CREATE OR REPLACE TABLE email_code_authentication (
   id BIGINT,
   user_id BIGINT,
-  code VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  expires_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  code VARCHAR,
+  created_at date,
+  expires_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE exit_fee_tiers (
@@ -1501,9 +1501,9 @@ CREATE OR REPLACE TABLE exit_fee_tiers (
   deal_id BIGINT,
   term_month NUMBER(20,0),
   fee_percent NUMBER(20,0),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE fees (
@@ -1521,9 +1521,9 @@ CREATE OR REPLACE TABLE fees (
   generate_invoice NUMBER(22,4),
   invoice_due_date DATE,
   notes VARCHAR,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ,
+  created_at date,
+  updated_at date,
+  deleted_at date,
   added_to_loan INTEGER,
   start_date DATE,
   end_date DATE,
@@ -1541,18 +1541,18 @@ CREATE OR REPLACE TABLE fees (
 CREATE OR REPLACE TABLE files (
   id BIGINT,
   deal_document_category_id BIGINT,
-  directory VARCHAR(255),
-  filename VARCHAR(255),
-  original_filename VARCHAR(255),
-  mime VARCHAR(255),
+  directory VARCHAR,
+  filename VARCHAR,
+  original_filename VARCHAR,
+  mime VARCHAR,
   size INTEGER,
   user_id BIGINT,
   document_folder VARCHAR(1000),
   sharepoint_path VARCHAR,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ,
-  sharepoint_unique_id VARCHAR(255)
+  created_at date,
+  updated_at date,
+  deleted_at date,
+  sharepoint_unique_id VARCHAR
 );
 
 CREATE OR REPLACE TABLE guarantors (
@@ -1561,9 +1561,9 @@ CREATE OR REPLACE TABLE guarantors (
   client_individual_id BIGINT,
   client_company_id BIGINT,
   client_group_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  deleted_at date,
+  created_at date,
+  updated_at date,
   guarantor_type_id BIGINT
 );
 
@@ -1571,19 +1571,19 @@ CREATE OR REPLACE TABLE lender_operational_team_admin (
   id BIGINT,
   user_id BIGINT,
   lender_id BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE linked_deals (
   id BIGINT,
   deal_id BIGINT,
   linked_deal_id BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  created_at date,
+  updated_at date,
   cross_collateralized INTEGER,
-  deleted_at TIMESTAMP_NTZ
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE loan_administrators (
@@ -1592,19 +1592,19 @@ CREATE OR REPLACE TABLE loan_administrators (
   client_individual_id BIGINT,
   client_company_id BIGINT,
   client_group_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE loan_custom_forms (
   id BIGINT,
-  name VARCHAR(255),
+  name VARCHAR,
   form_data VARCHAR,
   created_by BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ,
+  created_at date,
+  updated_at date,
+  deleted_at date,
   reference VARCHAR,
   form_type_id BIGINT,
   payment_required INTEGER,
@@ -1616,21 +1616,21 @@ CREATE OR REPLACE TABLE loan_custom_forms (
 CREATE OR REPLACE TABLE margin_override (
   id BIGINT,
   drawdown_id BIGINT,
-  from_DT TIMESTAMP_NTZ,
-  to_dt TIMESTAMP_NTZ,
+  from_DT date,
+  to_dt date,
   rate NUMBER(22,4),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE notes (
   id BIGINT,
   note VARCHAR,
   created_by BIGINT,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE notification (
@@ -1640,9 +1640,9 @@ CREATE OR REPLACE TABLE notification (
   drawdown_id BIGINT,
   drawdown_event_type_id BIGINT,
   file_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE notification_recipients (
@@ -1650,12 +1650,12 @@ CREATE OR REPLACE TABLE notification_recipients (
   notification_id BIGINT,
   client_individual_id BIGINT,
   used_email_address NUMBER(20,0),
-  subject VARCHAR(255),
+  subject VARCHAR,
   body VARCHAR,
   sent INTEGER,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE notification_rules (
@@ -1663,31 +1663,31 @@ CREATE OR REPLACE TABLE notification_rules (
   notification_template_id BIGINT,
   drawdown_event_type_id BIGINT,
   scheduled_for INTEGER,
-  interval_type VARCHAR(255),
-  subject_override VARCHAR(255),
+  interval_type VARCHAR,
+  subject_override VARCHAR,
   body_override VARCHAR,
   file_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  deleted_at date,
+  created_at date,
+  updated_at date,
   recipient_setting INTEGER,
   lending_type_id BIGINT
 );
 
 CREATE OR REPLACE TABLE notification_templates (
   id BIGINT,
-  doc_reference VARCHAR(255),
-  subject VARCHAR(255),
+  doc_reference VARCHAR,
+  subject VARCHAR,
   body VARCHAR,
   file_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE orders (
   id BIGINT,
-  reference VARCHAR(255),
+  reference VARCHAR,
   client_form_id BIGINT,
   user_id BIGINT,
   order_status_id BIGINT,
@@ -1695,18 +1695,18 @@ CREATE OR REPLACE TABLE orders (
   net_total NUMBER(22,4),
   gross_total NUMBER(22,4),
   vat_rate NUMBER(22,4),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ
+  created_at date,
+  updated_at date,
+  deleted_at date
 );
 
 CREATE OR REPLACE TABLE quote_note (
   id BIGINT,
   quote_id BIGINT,
   notes VARCHAR,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE quotes (
@@ -1716,19 +1716,19 @@ CREATE OR REPLACE TABLE quotes (
   deal_id BIGINT,
   file_id BIGINT,
   notes VARCHAR,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ
+  deleted_at date,
+  created_at date,
+  updated_at date
 );
 
 CREATE OR REPLACE TABLE quotes_recipients (
   id BIGINT,
   quote_id BIGINT,
   client_individual_id BIGINT,
-  used_email_address VARCHAR(255),
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  used_email_address VARCHAR,
+  deleted_at date,
+  created_at date,
+  updated_at date,
   client_company_id BIGINT,
   client_group_id BIGINT,
   broker_agent_id BIGINT
@@ -1737,16 +1737,16 @@ CREATE OR REPLACE TABLE quotes_recipients (
 CREATE OR REPLACE TABLE scheduled_notifications (
   id BIGINT,
   deal_notification_rule_id BIGINT,
-  scheduled_date TIMESTAMP_NTZ,
+  scheduled_date date,
   enabled INTEGER,
   enabled_by_user_id BIGINT,
   sent INTEGER,
-  datetime_sent TIMESTAMP_NTZ,
-  subject_sent VARCHAR(255),
+  datetime_sent date,
+  subject_sent VARCHAR,
   body_sent VARCHAR,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  deleted_at TIMESTAMP_NTZ,
+  created_at date,
+  updated_at date,
+  deleted_at date,
   drawdown_event_id BIGINT
 );
 
@@ -1755,23 +1755,23 @@ CREATE OR REPLACE TABLE users (
   type_id BIGINT,
   company_id BIGINT,
   avatar_id BIGINT,
-  first_name VARCHAR(255),
-  middle_name VARCHAR(255),
-  last_name VARCHAR(255),
-  email VARCHAR(255),
-  phone VARCHAR(255),
-  email_verified_at TIMESTAMP_NTZ,
-  change_password_datetime TIMESTAMP_NTZ,
+  first_name VARCHAR,
+  middle_name VARCHAR,
+  last_name VARCHAR,
+  email VARCHAR,
+  phone VARCHAR,
+  email_verified_at date,
+  change_password_datetime date,
   remember_token VARCHAR(100),
-  verification_token VARCHAR(255),
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
-  stripe_id VARCHAR(255),
-  pm_type VARCHAR(255),
+  verification_token VARCHAR,
+  created_at date,
+  updated_at date,
+  stripe_id VARCHAR,
+  pm_type VARCHAR,
   pm_last_four VARCHAR(4),
-  trial_ends_at TIMESTAMP_NTZ,
+  trial_ends_at date,
   is_active INTEGER,
-  deleted_at TIMESTAMP_NTZ,
+  deleted_at date,
   payment_provider_id BIGINT,
   file_id BIGINT
 );
@@ -1789,8 +1789,8 @@ CREATE OR REPLACE TABLE valuations (
   invoice_due_date DATE,
   fee_amount NUMBER(22,4),
   file_id BIGINT,
-  deleted_at TIMESTAMP_NTZ,
-  created_at TIMESTAMP_NTZ,
-  updated_at TIMESTAMP_NTZ,
+  deleted_at date,
+  created_at date,
+  updated_at date,
   report_requested_date DATE
 );
