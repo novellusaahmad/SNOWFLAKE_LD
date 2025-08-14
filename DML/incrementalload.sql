@@ -25,13 +25,13 @@ for (var i = 0; i < tables.length; i++) {
                   TIMESTAMP_FORMAT=AUTO`;
     snowflake.execute({sqlText: ff_sql});
 
-    // Incremental load — only new files since last load
+    // Incremental load — only new files
     var copy_sql = `COPY INTO DATA_WAREHOUSE.STAGING_LD.${tbl}
                     FROM @DATA_WAREHOUSE.STAGING_LD.AZURE_DATA_LAKE_LD
                     PATTERN='.*QA/${tbl}/.*'
                     FILE_FORMAT=(FORMAT_NAME=DATA_WAREHOUSE.STAGING_LD.${ff_name})
                     ON_ERROR=ABORT_STATEMENT
-                    FORCE=FALSE`;  -- Force=FALSE means only load new files
+                    FORCE=FALSE`;
     snowflake.execute({sqlText: copy_sql});
 }
 
